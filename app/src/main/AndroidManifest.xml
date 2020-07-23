@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projetoapollo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- iniciando com o splash -->
+        <activity
+            android:name=".Splash_Activity"
+            android:theme="@style/temaSemBarra">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Segunda janela -->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/temaSemBarra" />
+        <!-- janela de login -->
+        <activity
+            android:name=".LoginPublico_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".LoginArtista_Activity"
+            android:theme="@style/temaSemBarra" />
+        <!-- janela inscrição -->
+        <activity
+            android:name=".TelaInscricaoArtista_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".TelaInscricaoPublico_Activity"
+            android:theme="@style/temaSemBarra" />
+        <!-- janela cadastro -->
+    </application>
+
+</manifest>

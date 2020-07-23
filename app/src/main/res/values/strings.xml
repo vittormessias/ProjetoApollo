@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ProjetoApollo</string>
+    <!-- Botão xml -->
+    <string name="nomeApp">Apollo</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastro">Cadastre-se</string>
+    <!-- Texto xml -->
+    <string name="publico">Público</string>
+    <string name="artista">Artista</string>
+    <string name="insira_seu_email">Insira seu email</string>
+    <string name="insira_sua_senha">Insira sua senha</string>
+    <!-- Tela inscrição xml -->
+    <string name="nomeUsuario">Nome Completo:</string>
+    <string name="nomeLogin">Login:</string>
+    <string name="nomeEmail">E-mail:</string>
+    <string name="nomeSenha">Senha:</string>
+    <string name="nomeSenhaConfirmar">Confirmar senha:</string>
+    <!-- Outros do xml -->
+    <string name="recuperacao">Esqueceu a senha?</string>
+    <string name="digiteNome">Digite seu nome</string>
+    <string name="digiteLogin">Digite seu login</string>
+    <string name="digiteEmail">Digite um email</string>
+    <string name="digiteSenha">Digite uma senha</string>
+    <string name="digiteSenhaNovam">Digite a senha novamente</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="avancar">Avançar</string>
+    <string name="title_aviso">Aviso</string>
+    <string name="message_campos_invalido_branco">Há campos inválidos ou em branco!</string>
+</resources>
