@@ -105,4 +105,10 @@ public class TelaInscricaoArtista_Activity extends AppCompatActivity {
         Intent abrirJanelaPublico = new Intent(getApplicationContext(), TelaInscricaoPublico_Activity.class);
         startActivity(abrirJanelaPublico);
     }
+
+    public void abrirJanelaAvancar(View view) {
+        Intent abrirJanelaAvancar = new Intent(getApplicationContext(), CadPerfilArtista_Activity.class);
+        startActivity(abrirJanelaAvancar);
+
+    }
 }

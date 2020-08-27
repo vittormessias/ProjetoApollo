@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <!-- iniciando com o splash -->
         <activity
             android:name=".Splash_Activity"
@@ -38,7 +37,26 @@
         <activity
             android:name=".TelaInscricaoPublico_Activity"
             android:theme="@style/temaSemBarra" />
-        <!-- janela cadastro -->
+        <activity
+            android:name=".CadPerfilArtista_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".CadPerfilPublico_Activity"
+            android:theme="@style/temaSemBarra" />
+        <!-- janela splash artista e publico -->
+        <activity
+            android:name=".SplashArtista_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".SplashPublico_Activity"
+            android:theme="@style/temaSemBarra" />
+        <!-- janela Home -->
+        <activity
+            android:name=".HomeArtista_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".HomePublico_Activity"
+            android:theme="@style/temaSemBarra" />
     </application>
 
 </manifest>

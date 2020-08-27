@@ -26,4 +26,30 @@
     <string name="avancar">Avançar</string>
     <string name="title_aviso">Aviso</string>
     <string name="message_campos_invalido_branco">Há campos inválidos ou em branco!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="perfil">Perfil</string>
+    <string name="nome">Nome</string>
+    <string name="ex_vitor_messias">ex: Vitor Messias</string>
+    <string name="local">Local</string>
+    <string name="ex_proto_escrita_com_br">ex: proto-escrita.com.br</string>
+    <string name="sobre">Sobre</string>
+    <string name="ex_visual_havest">ex: visual havest</string>
+    <string name="cidade">Cidade</string>
+    <string name="definir_cidade">Definir cidade</string>
+    <string name="g_nero_musical">Gênero Musical</string>
+    <string name="definir_estilo_musical">Definir estilo musical</string>
+    <string name="instrumento_musical">Instrumento Musical</string>
+    <string name="definir_instrumento">Definir instrumento</string>
+    <string name="banda">Banda</string>
+    <string name="solo">Solo</string>
+    <string name="tipo_de_artista">Tipo de Artista</string>
+    <string name="sim">Sim</string>
+    <string name="n_o">Não</string>
+    <string name="possui_equipamentos">Possui Equipamentos</string>
+    <string name="ex_ambiente_descontraido">ex: ambiente descontraido</string>
+    <string name="ex_mitos_e_lendas">ex: Mitos e lendas</string>
+    <string name="nome_do_estabelecimento">Nome do Estabelecimento</string>
+    <string name="bem_vindo_a_ao_apollo">Bem Vindo(a) ao Apollo!</string>
+    <string name="todo">TODO</string>
 </resources>

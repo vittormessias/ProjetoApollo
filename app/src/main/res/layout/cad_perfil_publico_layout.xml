@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plano_de_fundo_app"
+    tools:context=".CadPerfilPublico_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/perfil"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <ImageView
+                android:id="@+id/imagemPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textPerfil"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/mitoslendas" />
+
+            <TextView
+                android:id="@+id/textNomeEstabelecimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagemPerfil"
+                android:layout_margin="4dp"
+                android:text="@string/nome_do_estabelecimento"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <EditText
+                android:id="@+id/textCadNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textNomeEstabelecimento"
+                android:background="@drawable/borda_sem_cor_quadrada"
+                android:hint="@string/ex_mitos_e_lendas"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCadNome"
+                android:layout_margin="4dp"
+                android:text="@string/local"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <EditText
+                android:id="@+id/textCadLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textLocal"
+                android:background="@drawable/borda_sem_cor_quadrada"
+                android:hint="@string/ex_proto_escrita_com_br"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCadLocal"
+                android:layout_margin="4dp"
+                android:text="@string/sobre"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <EditText
+                android:id="@+id/textCadSobre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textSobre"
+                android:background="@drawable/borda_sem_cor_quadrada"
+                android:hint="@string/ex_ambiente_descontraido"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCadSobre"
+                android:layout_margin="4dp"
+                android:text="@string/cidade"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <EditText
+                android:id="@+id/textCadCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCidade"
+                android:background="@drawable/borda_linha_vermelha"
+                android:hint="@string/definir_cidade"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textEstiloMusical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCadCidade"
+                android:layout_margin="4dp"
+                android:text="@string/g_nero_musical"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <EditText
+                android:id="@+id/textCadGeneroMusical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textEstiloMusical"
+                android:background="@drawable/borda_linha_vermelha"
+                android:hint="@string/definir_estilo_musical"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textEstiloArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCadGeneroMusical"
+                android:layout_margin="4dp"
+                android:text="@string/possui_equipamentos"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+
+            <Button
+                android:id="@+id/btnPublico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textEstiloArtista"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/botao_vermelho"
+                android:hint="@string/sim"
+                android:textColorHint="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textEstiloArtista"
+                android:layout_marginStart="100sp"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/borda_linha_vermelha"
+                android:hint="@string/n_o"
+                android:textColorHint="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelar"
+                style="?android:attr/button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/borda_botao_sem_cor"
+                android:hint="@string/cancelar"
+                android:onClick="voltarJanelaPublico"
+                android:textColorHint="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:onClick="abrirJanela"
+                android:id="@+id/btnAvancar"
+                style="?android:attr/button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130sp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/borda_com_cor"
+                android:hint="@string/avancar"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

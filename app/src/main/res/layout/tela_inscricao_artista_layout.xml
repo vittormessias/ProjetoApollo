@@ -193,7 +193,7 @@
                 android:layout_marginStart="20sp"
                 android:background="@drawable/borda_com_cor"
                 android:hint="@string/avancar"
-                android:onClick="abrirJanela"
+                android:onClick="abrirJanelaAvancar"
                 android:textColorHint="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="italic" />
