@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mExplorar"
+        android:icon="@drawable/ic_baseline_music"
+        android:title="Explorar" />
+    <item
+        android:id="@+id/mInscricoes"
+        android:icon="@drawable/ic_baseline_menu"
+        android:title="Inscrições" />
+    <item
+        android:id="@+id/mFeed"
+        android:icon="@drawable/logo"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/mNotificacoes"
+        android:icon="@drawable/ic_baseline_notifications"
+        android:title="Notificações" />
+    <item
+        android:id="@+id/mPerfil"
+        android:icon="@drawable/ic_baseline_person"
+        android:title="Perfil" />
+
+</menu>

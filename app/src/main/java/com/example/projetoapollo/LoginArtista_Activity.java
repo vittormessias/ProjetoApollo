@@ -31,4 +31,9 @@ public class LoginArtista_Activity extends AppCompatActivity {
     public void abrirJanelaArtista(View view) {
         Intent abrirJanelaArtista = new Intent(getApplicationContext(), TelaInscricaoArtista_Activity.class);
         startActivity(abrirJanelaArtista); }
+
+    public void abrirJanelaHome(View view) {
+        Intent abrirJanelaHome = new Intent(getApplicationContext(), HomeArtista_Activity.class);
+        startActivity(abrirJanelaHome);
+    }
 }

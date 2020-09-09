@@ -52,11 +52,9 @@
             android:theme="@style/temaSemBarra" />
         <!-- janela Home -->
         <activity
-            android:name=".HomeArtista_Activity"
-            android:theme="@style/temaSemBarra" />
-        <activity
             android:name=".HomePublico_Activity"
             android:theme="@style/temaSemBarra" />
+        <activity android:name=".HomeArtista_Activity"/>
     </application>
 
 </manifest>
