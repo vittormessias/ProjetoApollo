@@ -3,22 +3,22 @@
     <item
         android:id="@+id/mExplorar"
         android:icon="@drawable/ic_baseline_music"
-        android:title="Explorar" />
+        android:title="@string/explorar" />
     <item
         android:id="@+id/mInscricoes"
         android:icon="@drawable/ic_baseline_menu"
-        android:title="Inscrições" />
+        android:title="@string/inscricoes" />
     <item
         android:id="@+id/mFeed"
         android:icon="@drawable/logo"
-        android:title="Inicio" />
+        android:title="@string/inicio" />
     <item
         android:id="@+id/mNotificacoes"
         android:icon="@drawable/ic_baseline_notifications"
-        android:title="Notificações" />
+        android:title="@string/notifica_es" />
     <item
         android:id="@+id/mPerfil"
         android:icon="@drawable/ic_baseline_person"
-        android:title="Perfil" />
+        android:title="@string/perfil" />
 
 </menu>

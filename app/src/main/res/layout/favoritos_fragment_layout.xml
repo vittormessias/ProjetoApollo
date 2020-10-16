@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".FavoritosFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/botao_caixa_favoritos"
+            android:hint="@string/mitos_e_lendas"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgRobert1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/mitoslendas" />
+
+        <Button
+            android:id="@+id/btnVermelho1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="370dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/coracao" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/botao_caixa_favoritos"
+            android:hint="@string/system_club"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgRobert2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/mitoslendas" />
+
+        <Button
+            android:id="@+id/btnVermelho2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="370dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/coracao" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

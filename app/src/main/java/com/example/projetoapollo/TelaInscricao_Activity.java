@@ -3,18 +3,20 @@ package com.example.projetoapollo;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class TelaInscricaoArtista_Activity extends AppCompatActivity {
+public class TelaInscricao_Activity extends AppCompatActivity {
     //criar variaveis que irão representar os componentes do xml
-    Button btnPublico, btnArtista, btnCancelar, btnAvancar;
+    Button btnCancelar, btnAvancar;
     TextView txtNomeUsuario, txtLogin, txtEmail, txtSenha, txtConfigSenha;
     EditText txtCadUsuario, txtCadLogin, txtCadEmail, txtCadSenha, txtCadConfigSenha;
 
@@ -22,10 +24,8 @@ public class TelaInscricaoArtista_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //está chamada de metódo que faz referência ao layout
-        setContentView(R.layout.tela_inscricao_artista_layout);
+        setContentView(R.layout.tela_inscricao_layout);
         //apresentar os componentes do xml para o java
-        btnPublico = findViewById(R.id.btnPublico);
-        btnArtista = findViewById(R.id.btnArtista);
         btnCancelar = findViewById(R.id.btnCancelar);
         btnAvancar = findViewById(R.id.btnAvancar);
         txtNomeUsuario = findViewById(R.id.txtNomeUsuario);
@@ -91,24 +91,31 @@ public class TelaInscricaoArtista_Activity extends AppCompatActivity {
         return resultado;
     }
 
-    public void abrirJanela(View view) {
-        validaCampo();
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        switch (id){
+
+            case R.id.btnAvancar:
+                validaCampo();
+                break;
+            case R.id.btnCancelar:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void btnAvancar(View view) {
+        Intent btnAvancar = new Intent(getApplicationContext(), TelaArtistaPublico_Activity.class);
+        startActivity(btnAvancar);
     }
 
     //voltar janela
     public void voltarJanelaArtista(View view) {
-        Intent voltarJanelaArtista = new Intent(getApplicationContext(), LoginArtista_Activity.class);
+        Intent voltarJanelaArtista = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(voltarJanelaArtista);
     }
 
-    public void abrirJanelaPublico(View view) {
-        Intent abrirJanelaPublico = new Intent(getApplicationContext(), TelaInscricaoPublico_Activity.class);
-        startActivity(abrirJanelaPublico);
-    }
 
-    public void abrirJanelaAvancar(View view) {
-        Intent abrirJanelaAvancar = new Intent(getApplicationContext(), CadPerfilArtista_Activity.class);
-        startActivity(abrirJanelaAvancar);
-
-    }
 }

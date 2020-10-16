@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".NotificacoesPublicoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/voc_recebeu_uma_mensagem"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgMitoseLendas1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/mitoslendas" />
+
+        <Button
+            android:id="@+id/btnVermelho1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="390dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/botao_vermelho" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/btn1"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/robert_taylor_come_ou_a_seguir_voc"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgRobert"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/robert" />
+
+        <Button
+            android:id="@+id/btnVermelho2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="390dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/botao_vermelho" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn2"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/vitor_messias_postou_uma_foto"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgVitor1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/vitor" />
+
+        <Button
+            android:id="@+id/btnVermelho3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="390dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/botao_vermelho" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn3"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/voc_recebeu_uma_mensagem"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgYasmin1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="203dp"
+            android:background="@drawable/yasmin" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn4"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/seu_evento_est_pr_ximo"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn5"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/voc_recebeu_uma_mensagem"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgVitor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="332dp"
+            android:background="@drawable/vitor" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/btn6"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/gustavo_ara_jo_come_ou_a_seguir_voc"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgGustavo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="398dp"
+            android:background="@drawable/gustavo" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn7"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/voc_recebeu_uma_mensagem"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnImgYasmin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="460dp"
+            android:background="@drawable/yasmin" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn8"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/seja_bem_vindo"
+            android:textColorHint="#fff" />
+    </RelativeLayout>
+
+</FrameLayout>

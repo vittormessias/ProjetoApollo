@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plano_de_fundo_app"
+    tools:context=".EstiloInstrumento_Activity">
+
+    <ImageView
+        android:id="@+id/imgSeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/seta"
+        android:onClick="voltarJanelaArtista" />
+
+    <CheckBox
+        android:id="@+id/instrumentoViolao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgSeta"
+        android:text="@string/viol_o"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoGuitarra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoViolao"
+        android:text="@string/guitarra"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoTeclado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoGuitarra"
+        android:text="@string/teclado"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoVocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoTeclado"
+        android:text="@string/vocal"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoBateria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoVocal"
+        android:text="@string/bateria"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoBaixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoBateria"
+        android:text="@string/baixo"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoUkulele"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoBaixo"
+        android:text="@string/ukulele"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoViolino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoUkulele"
+        android:text="@string/violino"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoSaxofone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoViolino"
+        android:text="@string/saxofone"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoSanfona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoSaxofone"
+        android:text="@string/sanfona"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoSampler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoSanfona"
+        android:text="@string/sampler"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/instrumentoCavaquinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instrumentoSampler"
+        android:text="@string/cavaquinho"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+</RelativeLayout>

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirOutraJanela(View view) {
-        Intent abrirOutraJanela = new Intent(getApplicationContext(), TelaInscricaoArtista_Activity.class);
+        Intent abrirOutraJanela = new Intent(getApplicationContext(), TelaInscricao_Activity.class);
         startActivity(abrirOutraJanela);
     }
 }

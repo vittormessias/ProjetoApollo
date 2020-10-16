@@ -38,7 +38,12 @@ public class LoginPublico_Activity extends AppCompatActivity {
     }
 
     public void abrirJanelaPublico(View view) {
-        Intent abrirJanelaPublico = new Intent(getApplicationContext(), TelaInscricaoPublico_Activity.class);
+        Intent abrirJanelaPublico = new Intent(getApplicationContext(), CadPerfilPublico_Activity.class);
         startActivity(abrirJanelaPublico);
+    }
+
+    public void abrirJanelaPerfilPublico(View view) {
+        Intent abrirJanelaPerfilPublico = new Intent(getApplicationContext(), HomePublico_Activity.class);
+        startActivity(abrirJanelaPerfilPublico);
     }
 }

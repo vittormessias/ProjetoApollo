@@ -139,11 +139,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textEstiloMusical"
                 android:background="@drawable/borda_linha_vermelha"
-                android:hint="@string/definir_estilo_musical"
+                android:hint="@string/clique_duas_vezes_ou_escreva"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                android:onClick="abrirJanelaGeneroMusical"
                 android:textColorHint="#ffffff"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textInstrumentoMusical"
@@ -162,11 +163,12 @@
                 android:layout_below="@+id/textInstrumentoMusical"
                 android:autofillHints="no"
                 android:background="@drawable/borda_linha_vermelha"
-                android:hint="@string/definir_instrumento"
+                android:hint="@string/clique_duas_vezes_ou_escreva"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                android:onClick="abrirJanelaInstrumento"
                 android:textColorHint="#ffffff"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textEstiloArtista"
@@ -212,7 +214,6 @@
             android:orientation="horizontal">
 
             <Button
-                android:onClick="voltarJanelaArtista"
                 android:id="@+id/btnCancelar"
                 style="?android:attr/button"
                 android:layout_width="120dp"
@@ -220,12 +221,12 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/borda_botao_sem_cor"
                 android:hint="@string/cancelar"
+                android:onClick="voltarJanelaArtista"
                 android:textColorHint="#ffffff"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
             <Button
-                android:onClick="abrirJanelaSplash"
                 android:id="@+id/btnAvancar"
                 style="?android:attr/button"
                 android:layout_width="120dp"
@@ -234,6 +235,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/borda_com_cor"
                 android:hint="@string/avancar"
+                android:onClick="abrirJanelaSplash"
                 android:textColorHint="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="italic" />

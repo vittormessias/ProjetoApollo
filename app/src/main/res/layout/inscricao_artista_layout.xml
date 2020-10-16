@@ -3,12 +3,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".InscricaoArtistaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:ignore="UselessParent">
+
+        <Button
+            android:id="@+id/btnPesquisar"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/botao_pesquisar"
+            android:hint="@string/buscar"
+            android:textSize="20sp"
+            android:textStyle="bold|normal" />
+
+        <TextView
+            android:id="@+id/txtInscricoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPesquisar"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/inscricoes"
+            android:textSize="25sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/imgVitor"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="120dp"
+            android:contentDescription="@string/vitor_messias"
+            android:src="@drawable/imgvitor" />
+
+        <TextView
+            android:id="@+id/txtVitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgVitor"
+            android:layout_marginStart="45dp"
+            android:text="@string/vitor_messias"
+            android:textColor="#000"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:id="@+id/imgRobert"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignStart="@+id/imgVitor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="120dp"
+            android:contentDescription="@string/robert_taylor"
+            android:src="@drawable/imgrobert" />
+
+        <TextView
+            android:id="@+id/txtRobert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgRobert"
+            android:layout_marginStart="250dp"
+            android:text="@string/robert_taylor"
+            android:textColor="#000"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:id="@+id/imgGustavo"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="270dp"
+            android:contentDescription="@string/gustavo_araujo"
+            android:src="@drawable/imggustavo" />
+
+        <TextView
+            android:id="@+id/txtGustavo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgVitor"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/gustavo_araujo"
+            android:textColor="#000"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:id="@+id/imgYasmin"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignStart="@+id/imgGustavo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="270dp"
+            android:contentDescription="@string/yasmin_luize"
+            android:src="@drawable/imgyas" />
+
+        <TextView
+            android:id="@+id/txtYasmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgYasmin"
+            android:layout_marginStart="250dp"
+            android:text="@string/yasmin_luize"
+            android:textColor="#000"
+            android:textStyle="normal|bold" />
+
+
+        <ImageView
+            android:id="@+id/imgLouise"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="420dp"
+            android:contentDescription="@string/michaelle_louise"
+            android:src="@drawable/imglouise" />
+
+        <TextView
+            android:id="@+id/txtLouise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgLouise"
+            android:layout_marginStart="30dp"
+            android:text="@string/michaelle_louise"
+            android:textColor="#000"
+            android:textStyle="normal|bold" />
+
+    </RelativeLayout>
 
 </FrameLayout>

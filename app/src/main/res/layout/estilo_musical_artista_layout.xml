@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plano_de_fundo_app"
+    tools:context=".EstiloMusicalArtista_Activity">
+
+    <ImageView
+        android:id="@+id/imgSeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/seta"
+        android:onClick="voltarJanela" />
+
+    <CheckBox
+        android:id="@+id/generoRock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgSeta"
+        android:text="@string/rock"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoSertanejo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoRock"
+        android:text="@string/sertanejo"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoHipHop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoSertanejo"
+        android:text="@string/hip_hop"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoJazz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoHipHop"
+        android:text="@string/jazz"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoBlues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoJazz"
+        android:text="@string/blues"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoRap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoBlues"
+        android:text="@string/rap"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoEletronica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoRap"
+        android:text="@string/eletronica"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoMetal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoEletronica"
+        android:text="@string/metal"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoMetal"
+        android:text="@string/pop"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoFunk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoPop"
+        android:text="@string/funk"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoReggae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoFunk"
+        android:text="@string/reggae"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+    <CheckBox
+        android:id="@+id/generoAlternativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generoReggae"
+        android:text="@string/alternativo"
+        android:textSize="30sp"
+        android:textStyle="italic|normal" />
+
+
+</RelativeLayout>

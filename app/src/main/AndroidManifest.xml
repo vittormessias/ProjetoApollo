@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projetoapollo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,10 +35,7 @@
             android:theme="@style/temaSemBarra" />
         <!-- janela inscrição -->
         <activity
-            android:name=".TelaInscricaoArtista_Activity"
-            android:theme="@style/temaSemBarra" />
-        <activity
-            android:name=".TelaInscricaoPublico_Activity"
+            android:name=".TelaInscricao_Activity"
             android:theme="@style/temaSemBarra" />
         <activity
             android:name=".CadPerfilArtista_Activity"
@@ -51,10 +51,22 @@
             android:name=".SplashPublico_Activity"
             android:theme="@style/temaSemBarra" />
         <!-- janela Home -->
+        <activity android:name=".HomePublico_Activity"/>
+        <activity android:name=".HomeArtista_Activity" />
+        <!-- janela de Decisão -->
         <activity
-            android:name=".HomePublico_Activity"
+            android:name=".TelaArtistaPublico_Activity"
             android:theme="@style/temaSemBarra" />
-        <activity android:name=".HomeArtista_Activity"/>
+        <!-- janela de estilos -->
+        <activity
+            android:name=".EstiloMusicalArtista_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".EstiloInstrumento_Activity"
+            android:theme="@style/temaSemBarra" />
+        <activity
+            android:name=".EstiloMusicalPublico_Activity"
+            android:theme="@style/temaSemBarra" />
     </application>
 
 </manifest>

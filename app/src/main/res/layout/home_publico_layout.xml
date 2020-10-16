@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
     tools:context=".HomePublico_Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/imgBtnSair"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="376sp"
+            android:contentDescription="@string/sair"
+            android:onClick="voltarJanelaSair"
+            android:src="@drawable/power" />
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/fotoram" />
+
+        <TextView
+            android:id="@+id/txtNomeUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgLogo"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/mitos_e_lendas"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgCoracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtNomeUsuario"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="270sp"
+            android:layout_marginTop="132dp"
+            android:contentDescription="@string/favorito"
+            android:src="@drawable/coracao" />
+
+        <TextView
+            android:id="@+id/txtDescricaoPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCoracao"
+            android:layout_margin="13dp"
+            android:text="@string/_1_rock_bar_do_parque_am_rica_que_fica_a_5_minutos_do_terminal_graja_ambiente_descontra_do_e_decora_o_singular_com_diversos_posters_e_capa_de_revistas_da_d_cada_de_70_80_90_e_2000_onde_se_ouve_e_v_o_bom_e_velho_rock_and_roll"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="normal|italic" />
+
+        <ImageView
+            android:id="@+id/imgInstagram"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtDescricaoPerfil"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/instagram"
+            android:src="@drawable/instagram" />
+
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/imgInstagram"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="288dp"
+            android:contentDescription="@string/facebook"
+            android:src="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/imgSimboloTelefone"
+            android:layout_width="45dp"
+            android:layout_height="65dp"
+            android:layout_alignStart="@+id/imgFacebook"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="290dp"
+            android:contentDescription="@string/telefone"
+            android:src="@drawable/telefone" />
+
+        <ImageView
+            android:id="@+id/imgFotoPostPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignStart="@+id/imgInstagram"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="330dp"
+            android:contentDescription="@string/foto"
+            android:src="@drawable/banda" />
+
+        <ImageView
+            android:id="@+id/imgFotoPostPerfilDois"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/imgInstagram"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="356dp"
+            android:contentDescription="@string/foto"
+            android:src="@drawable/mumia" />
+
+        <ImageView
+            android:id="@+id/imgFotoPostPerfilTres"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignStart="@+id/imgFotoPostPerfil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="421dp"
+            android:contentDescription="@string/foto"
+            android:src="@drawable/palco" />
+
+        <ImageView
+            android:id="@+id/imgFotoPostPerfilQuatro"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignStart="@+id/imgFotoPostPerfil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="421dp"
+            android:contentDescription="@string/foto"
+            android:src="@drawable/maisfotos" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/idframeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/idBottomNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            android:background="#fff"
+            app:menu="@menu/menu_dois" />
+
+    </FrameLayout>
+
+</RelativeLayout>

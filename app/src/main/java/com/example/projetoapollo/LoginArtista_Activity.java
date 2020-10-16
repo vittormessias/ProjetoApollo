@@ -29,7 +29,7 @@ public class LoginArtista_Activity extends AppCompatActivity {
         Intent abrirJanelaPublico = new Intent(getApplicationContext(), LoginPublico_Activity.class);
         startActivity(abrirJanelaPublico); }
     public void abrirJanelaArtista(View view) {
-        Intent abrirJanelaArtista = new Intent(getApplicationContext(), TelaInscricaoArtista_Activity.class);
+        Intent abrirJanelaArtista = new Intent(getApplicationContext(), TelaInscricao_Activity.class);
         startActivity(abrirJanelaArtista); }
 
     public void abrirJanelaHome(View view) {

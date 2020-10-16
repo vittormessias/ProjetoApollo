@@ -139,11 +139,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textEstiloMusical"
                 android:background="@drawable/borda_linha_vermelha"
-                android:hint="@string/definir_estilo_musical"
+                android:hint="@string/clique_duas_vezes_ou_escreva"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                android:onClick="abrirJanelaEstiloMusical"
                 android:textColorHint="#ffffff"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textEstiloArtista"
@@ -202,7 +203,6 @@
                 android:textStyle="italic" />
 
             <Button
-                android:onClick="abrirJanela"
                 android:id="@+id/btnAvancar"
                 style="?android:attr/button"
                 android:layout_width="120dp"
@@ -211,6 +211,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/borda_com_cor"
                 android:hint="@string/avancar"
+                android:onClick="abrirJanela"
                 android:textColorHint="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="italic" />

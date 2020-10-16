@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ExplorarFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:id="@+id/btnCaixaPesquisa"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/botao_caixa_pesquisar" />
+
+        <Button
+            android:id="@+id/btnPesquisar"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/botao_pesquisar"
+            android:hint="@string/pesquisar"
+            android:textSize="20sp"
+            android:textStyle="bold|normal" />
+
+        <ImageView
+            android:id="@+id/imgLupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/lupa"
+            android:src="@drawable/lupa" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnPesquisar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/botao1"
+            android:hint="@string/rock"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao2"
+            android:hint="@string/pop"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao3"
+            android:hint="@string/eletronica"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao4"
+            android:hint="@string/samba"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao5"
+            android:hint="@string/sertanejo"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao6"
+            android:hint="@string/funk"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn6"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao7"
+            android:hint="@string/mais"
+            android:textColorHint="#fff"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
