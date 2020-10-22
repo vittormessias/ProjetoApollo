@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -13,12 +14,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class TelaInscricao_Activity extends AppCompatActivity {
+public class TelaInscricao_Activity extends AppCompatActivity implements View.OnClickListener {
+
+    public static final String NOME_BANCO_DE_DADOS = "APOLLO_BD";
+
+    UsuarioAdapter usuarioAdapter;
+
     //criar variaveis que irão representar os componentes do xml
     Button btnCancelar, btnAvancar;
     TextView txtNomeUsuario, txtLogin, txtEmail, txtSenha, txtConfigSenha;
     EditText txtCadUsuario, txtCadLogin, txtCadEmail, txtCadSenha, txtCadConfigSenha;
+
+    SQLiteDatabase meuBancoDeDados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +48,82 @@ public class TelaInscricao_Activity extends AppCompatActivity {
         txtCadSenha = findViewById(R.id.txtCadSenha);
         txtCadConfigSenha = findViewById(R.id.txtCadConfigSenha);
 
+        btnAvancar.setOnClickListener(this);
+
+        meuBancoDeDados = openOrCreateDatabase(NOME_BANCO_DE_DADOS, MODE_PRIVATE, null);
+
+        criarTabelaUsuario();
+
     }
+
+    //Este método irá validar o nomeUsuario
+    private boolean verificarEntrada(String nomeUsuario, String nomeLogin, String nomeEmail, String nomeSenha, String nomeConfigSenha) {
+        if (nomeUsuario.isEmpty()) {
+            txtCadUsuario.setError("Por favor entre com um nome de usario");
+            txtCadUsuario.requestFocus();
+            return false;
+        }
+
+        if (nomeLogin.isEmpty()) {
+            txtCadLogin.setError("Por favor entre com uma nome de login");
+            txtCadLogin.requestFocus();
+            return false;
+        }
+        if (nomeEmail.isEmpty()) {
+            txtCadEmail.setError("Por favor entre com um email");
+            txtCadEmail.requestFocus();
+            return false;
+        }
+        if (nomeSenha.isEmpty()) {
+            txtCadSenha.setError("Por favor entre com uma senha");
+            txtCadSenha.requestFocus();
+                return false;
+            }
+        if (nomeConfigSenha.isEmpty()) {
+            txtCadConfigSenha.setError("Por favor entre com uma senha");
+            txtCadConfigSenha.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
+    private void adicionarUsuario() {
+        String nomeUsuario = txtCadUsuario.getText().toString().trim();
+        String nomeLogin = txtCadLogin.getText().toString().trim();
+        String nomeEmail = txtCadEmail.getText().toString().trim();
+        String nomeSenha = txtCadSenha.getText().toString().trim();
+        String nomeConfigSenha = txtCadConfigSenha.getText().toString().trim();
+
+        //validando entrada
+        if (verificarEntrada(nomeUsuario, nomeLogin, nomeEmail, nomeSenha, nomeConfigSenha)) {
+
+            String insertSQL = "INSERT INTO Usuario (" +
+                    "nomeUsuario, " +
+                    "nomeLogin, " +
+                    "nomeEmail," +
+                    "nomeSenha," +
+                    "nomeConfigSenha)" +
+                    "VALUES(?, ?, ?, ?, ?);";
+
+            meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLogin, nomeEmail, nomeSenha, nomeConfigSenha});
+
+            Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // este método irá criar a tabela
+    private void criarTabelaUsuario() {
+        meuBancoDeDados.execSQL(
+                "CREATE TABLE IF NOT EXISTS Usuario (" +
+                        "id_usuario integer PRIMARY KEY AUTOINCREMENT," +
+                        "nomeUsuario varchar(80) NOT NULL," +
+                        "nomeLogin varchar(40) NOT NULL UNIQUE," +
+                        "nomeEmail varchar(100) NOT NULL UNIQUE," +
+                        "nomeSenha varchar(20) NOT NULL UNIQUE," +
+                        "nomeConfigSenha varchar(20) NOT NULL );"
+        );
+    }
+
     //validar campos
     private void validaCampo(){
 
@@ -106,6 +190,12 @@ public class TelaInscricao_Activity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void onClick(View view) {
+        if (view.getId() == R.id.btnAvancar) {
+            adicionarUsuario();
+        }
+    }
+
     public void btnAvancar(View view) {
         Intent btnAvancar = new Intent(getApplicationContext(), TelaArtistaPublico_Activity.class);
         startActivity(btnAvancar);
@@ -116,6 +206,4 @@ public class TelaInscricao_Activity extends AppCompatActivity {
         Intent voltarJanelaArtista = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(voltarJanelaArtista);
     }
-
-
 }

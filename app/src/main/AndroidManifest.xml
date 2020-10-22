@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projetoapollo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <!-- iniciando com o splash -->
         <activity
             android:name=".Splash_Activity"
@@ -51,7 +52,7 @@
             android:name=".SplashPublico_Activity"
             android:theme="@style/temaSemBarra" />
         <!-- janela Home -->
-        <activity android:name=".HomePublico_Activity"/>
+        <activity android:name=".HomePublico_Activity" />
         <activity android:name=".HomeArtista_Activity" />
         <!-- janela de Decisão -->
         <activity
