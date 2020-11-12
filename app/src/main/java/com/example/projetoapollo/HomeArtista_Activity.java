@@ -19,19 +19,35 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class HomeArtista_Activity extends AppCompatActivity {
 
+    Button btnCarregaDados;
     ImageButton imgBtnSair, imgSimboloLapis;
-    TextView textNomeUsuHomeArtista, textNomeBiografiaHomeArtista, textNomeLinkHomeArtista, textNomeNumeroHomeArtista, textNomeNumeroDoisHomeArtista, txtNomeUsuario, txtSP;
+    TextView nome, sobre, site, textNomeNumeroHomeArtista, textNomeNumeroDoisHomeArtista, txtNomeUsuario, txtSP;
     ImageView imagemPerfil, imgInstagram, imgFacebook, imgTelefone, imgFotoPerfilPequena, imgFotoPontos, imgFotoPostPerfil, imgSimboloFav, imgSimboloMusica, imgSimboloMensagem;
 
-    String server_url = "http://192.168.100.5/projetovolleyapi/logo.png";
+    String server_url = "http://192.168.0.240/ProjetoApollo/logo.png";
+    String url_json = "http://192.168.0.240/ProjetoApollo/apollo.php";
+
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -39,10 +55,12 @@ public class HomeArtista_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_artista_layout);
 
+        nome = findViewById(R.id.textNome);
+        sobre = findViewById(R.id.textBiografia);
+        site = findViewById(R.id.textLink);
+
+
         imgBtnSair = findViewById(R.id.imgBtnSair);
-        textNomeUsuHomeArtista = findViewById(R.id.textNomeUsuHomeArtista);
-        textNomeBiografiaHomeArtista = findViewById(R.id.textNomeBiografiaHomeArtista);
-        textNomeLinkHomeArtista = findViewById(R.id.textNomeLinkHomeArtista);
         textNomeNumeroHomeArtista = findViewById(R.id.textNomeNumeroHomeArtista);
         textNomeNumeroDoisHomeArtista = findViewById(R.id.textNomeNumeroDoisHomeArtista);
         txtNomeUsuario = findViewById(R.id.txtNomeUsuario);
@@ -58,6 +76,8 @@ public class HomeArtista_Activity extends AppCompatActivity {
         imgSimboloMusica = findViewById(R.id.imgSimboloMusica);
         imgSimboloMensagem = findViewById(R.id.imgSimboloMensagem);
         imgSimboloLapis = findViewById(R.id.imgSimboloLapis);
+
+        btnCarregaDados = findViewById(R.id.btnCarregaInformacoes);
 
         bottomNavigationView = findViewById(R.id.idBottomNavBar);
 
@@ -120,6 +140,38 @@ public class HomeArtista_Activity extends AppCompatActivity {
                 MySingleton.getInstance(getApplicationContext()).addToRequestQue(imageRequest);
             }
         });
+
+        btnCarregaDados.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url_json, null,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
+                                    //Os nomes recebidos pelo response.get deverá ter o mesmo nome dos campos da tabela php
+                                    nome.setText(response.getString("Nome"));
+                                    sobre.setText(response.getString("Sobre"));
+                                    site.setText(response.getString("Site"));
+                                } catch (JSONException e) {
+                                    Toast.makeText(getApplicationContext(),
+                                            "Nenhum nome encontrado...",
+                                            Toast.LENGTH_SHORT).show();
+                                    e.printStackTrace();
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),
+                                "Erro ao carregar as informações",
+                                Toast.LENGTH_SHORT).show();
+                        error.printStackTrace();
+                    }
+                });
+                MySingleton.getInstance(HomeArtista_Activity.this).addToRequestque(jsonObjectRequest);
+            }
+        });
+
     }
 
 

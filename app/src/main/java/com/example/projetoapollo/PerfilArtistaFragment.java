@@ -27,7 +27,7 @@ import java.util.Objects;
 public class PerfilArtistaFragment extends Fragment {
 
     ImageButton imgBtnSair;
-    TextView textNomeUsuHomeArtista, textNomeBiografiaHomeArtista, textNomeLinkHomeArtista, textNomeNumeroHomeArtista, textNomeNumeroDoisHomeArtista, txtNomeUsuario, txtSP;
+    TextView textNome, textBiografia, textLink, textNomeNumeroHomeArtista, textNomeNumeroDoisHomeArtista, txtNomeUsuario, txtSP;
     ImageView imagemPerfil, imgInstagram, imgFacebook, imgTelefone, imgFotoPerfilPequena, imgFotoPontos, imgFotoPostPerfil, imgSimboloFav, imgSimboloMusica, imgSimboloMensagem, imgSimboloLapis;
 
     SmartTabLayout smartTabLayout;
@@ -47,9 +47,9 @@ public class PerfilArtistaFragment extends Fragment {
         View view = inflater.inflate(R.layout.home_artista_layout, container, false);
 
         imgBtnSair = view.findViewById(R.id.imgBtnSair);
-        textNomeUsuHomeArtista = view.findViewById(R.id.textNomeUsuHomeArtista);
-        textNomeBiografiaHomeArtista = view.findViewById(R.id.textNomeBiografiaHomeArtista);
-        textNomeLinkHomeArtista = view.findViewById(R.id.textNomeLinkHomeArtista);
+        textNome = view.findViewById(R.id.textNome);
+        textBiografia = view.findViewById(R.id.textBiografia);
+        textLink = view.findViewById(R.id.textLink);
         textNomeNumeroHomeArtista = view.findViewById(R.id.textNomeNumeroHomeArtista);
         textNomeNumeroDoisHomeArtista = view.findViewById(R.id.textNomeNumeroDoisHomeArtista);
         txtNomeUsuario = view.findViewById(R.id.txtNomeUsuario);

@@ -17,6 +17,13 @@
             android:layout_height="match_parent"
             tools:ignore="UselessParent">
 
+            <Button
+                android:id="@+id/btnCarregaInformacoes"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="200sp"
+                android:contentDescription="@string/sair" />
+
             <ImageButton
                 android:id="@+id/imgBtnSair"
                 android:onClick="voltarJanelaSair"
@@ -27,7 +34,7 @@
                 android:contentDescription="@string/sair" />
 
             <TextView
-                android:id="@+id/textNomeUsuHomeArtista"
+                android:id="@+id/textNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -39,7 +46,7 @@
                 android:id="@+id/imagemPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@id/textNomeUsuHomeArtista"
+                android:layout_alignStart="@id/textNome"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="270sp"
                 android:layout_marginTop="10dp"
@@ -47,19 +54,19 @@
                 android:src="@drawable/vitor" />
 
             <TextView
-                android:id="@+id/textNomeBiografiaHomeArtista"
+                android:id="@+id/textBiografia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textNomeUsuHomeArtista"
+                android:layout_below="@+id/textNome"
                 android:layout_marginStart="15dp"
                 android:text="@string/visual_harvest"
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textNomeLinkHomeArtista"
+                android:id="@+id/textLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textNomeBiografiaHomeArtista"
+                android:layout_below="@id/textBiografia"
                 android:layout_marginStart="15dp"
                 android:text="@string/proto_escrita_tumblr_com"
                 android:textColor="#0056EA" />

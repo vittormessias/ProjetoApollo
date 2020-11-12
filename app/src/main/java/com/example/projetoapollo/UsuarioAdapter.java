@@ -21,7 +21,7 @@ public class UsuarioAdapter extends ArrayAdapter<Usuario> {
     List<Usuario> listaUsuarios;
     SQLiteDatabase meuBancoDeDados;
 
-    TextView textNomeUsuHomeArtista;
+    TextView textNome;
 
     public UsuarioAdapter(@NonNull Context mCtx, int listaLayoutRes, List<Usuario> listaUsuarios, SQLiteDatabase meuBancoDeDados) {
         super(mCtx, listaLayoutRes, listaUsuarios);
@@ -38,13 +38,13 @@ public class UsuarioAdapter extends ArrayAdapter<Usuario> {
 
         final Usuario usuario = listaUsuarios.get(position);
 
-        textNomeUsuHomeArtista = view.findViewById(R.id.textNomeUsuHomeArtista);
+        textNome = view.findViewById(R.id.textNome);
 
 
-        TextView textNomeUsuHomeArtista = view.findViewById(R.id.textNomeUsuHomeArtista);
+        TextView textNome = view.findViewById(R.id.textNome);
 
 
-        textNomeUsuHomeArtista.setText(usuario.getNomeUsuario());
+        textNome.setText(usuario.getNomeUsuario());
 
 
         return view;
