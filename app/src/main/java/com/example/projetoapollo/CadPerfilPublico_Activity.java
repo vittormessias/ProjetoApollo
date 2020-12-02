@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CadPerfilPublico_Activity extends AppCompatActivity implements View.OnClickListener {
+public class CadPerfilPublico_Activity extends AppCompatActivity {
 
     public static final String NOME_BANCO_DE_DADOS = "APOLLO_BD";
 
@@ -50,7 +50,7 @@ public class CadPerfilPublico_Activity extends AppCompatActivity implements View
         btnCancelar = findViewById(R.id.btnCancelar);
         btnAvancar = findViewById(R.id.btnAvancar);
 
-        btnAvancar.setOnClickListener(this);
+        //btnAvancar.setOnClickListener(this);
 
         meuBancoDeDados = openOrCreateDatabase(NOME_BANCO_DE_DADOS, MODE_PRIVATE, null);
 
@@ -88,29 +88,29 @@ public class CadPerfilPublico_Activity extends AppCompatActivity implements View
         return true;
     }
 
-    private void adicionarUsuario() {
-        String nomeUsuario = textCadNome.getText().toString().trim();
-        String nomeLocal = textCadLocal.getText().toString().trim();
-        String nomeSobre = textCadSobre.getText().toString().trim();
-        String nomeCidade = textCadCidade.getText().toString().trim();
-        String nomeGeneroMusical = textCadGeneroMusical.getText().toString().trim();
+   // private void adicionarUsuario() {
+       // String nomeUsuario = textCadNome.getText().toString().trim();
+       // String nomeLocal = textCadLocal.getText().toString().trim();
+       // String nomeSobre = textCadSobre.getText().toString().trim();
+       // String nomeCidade = textCadCidade.getText().toString().trim();
+       // String nomeGeneroMusical = textCadGeneroMusical.getText().toString().trim();
 
         //validando entrada
-        if (verificarEntrada(nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical)) {
+      //  if (verificarEntrada(nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical)) {
 
-            String insertSQL = "INSERT INTO PerfilArtista (" +
-                    "nomeUsuario, " +
-                    "nomeLocal, " +
-                    "nomeSobre," +
-                    "nomeCidade," +
-                    "nomeGeneroMusical)" +
-                    "VALUES(?, ?, ?, ?, ?);";
+      //      String insertSQL = "INSERT INTO PerfilArtista (" +
+       //             "nomeUsuario, " +
+        //            "nomeLocal, " +
+        //            "nomeSobre," +
+         //           "nomeCidade," +
+         //           "nomeGeneroMusical)" +
+          //          "VALUES(?, ?, ?, ?, ?);";
 
-            meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical});
+            //meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical});
 
-            Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
-        }
-    }
+            //Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
+       // }
+   // }
 
     // este método irá criar a tabela
     private void criarTabelaPerfilPublico() {
@@ -165,11 +165,11 @@ public class CadPerfilPublico_Activity extends AppCompatActivity implements View
         }
     }
 
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnAvancar) {
-            adicionarUsuario();
-        }
-    }
+   // public void onClick(View view) {
+      //  if (view.getId() == R.id.btnAvancar) {
+       //     adicionarUsuario();
+        //}
+    //}
 
     private boolean isCampoVazio(String valor) {
         boolean resultado = (TextUtils.isEmpty(valor) || valor.trim().isEmpty());

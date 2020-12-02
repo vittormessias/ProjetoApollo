@@ -51,10 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textNome"
                 android:background="@drawable/borda_sem_cor_quadrada"
-                android:hint="@string/ex_vitor_messias"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:textColorHint="#ffffff"
+                android:textColorHint="#fff"
                 android:textSize="14sp" />
 
             <TextView
@@ -73,10 +72,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textLocal"
                 android:background="@drawable/borda_sem_cor_quadrada"
-                android:hint="@string/ex_proto_escrita_com_br"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:textColorHint="#ffffff"
+                android:textColorHint="#fff"
                 android:textSize="14sp" />
 
             <TextView
@@ -95,10 +93,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textSobre"
                 android:background="@drawable/borda_sem_cor_quadrada"
-                android:hint="@string/ex_visual_havest"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:textColorHint="#ffffff"
+                android:textColorHint="#fff"
                 android:textSize="14sp" />
 
             <TextView
@@ -199,7 +196,7 @@
                 android:layout_below="@+id/textEstiloArtista"
                 android:layout_marginStart="100sp"
                 android:layout_marginTop="10sp"
-                android:background="@drawable/borda_linha_vermelha"
+                android:background="@drawable/botao1"
                 android:hint="@string/banda"
                 android:textColorHint="#ffffff"
                 android:textSize="20sp"

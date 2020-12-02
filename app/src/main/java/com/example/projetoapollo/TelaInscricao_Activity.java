@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TelaInscricao_Activity extends AppCompatActivity implements View.OnClickListener {
+public class TelaInscricao_Activity extends AppCompatActivity {
 
     public static final String NOME_BANCO_DE_DADOS = "APOLLO_BD";
 
@@ -48,11 +48,11 @@ public class TelaInscricao_Activity extends AppCompatActivity implements View.On
         txtCadSenha = findViewById(R.id.txtCadSenha);
         txtCadConfigSenha = findViewById(R.id.txtCadConfigSenha);
 
-        btnAvancar.setOnClickListener(this);
+       //btnAvancar.setOnClickListener(this);
 
         meuBancoDeDados = openOrCreateDatabase(NOME_BANCO_DE_DADOS, MODE_PRIVATE, null);
 
-        criarTabelaUsuario();
+       //criarTabelaUsuario();
 
     }
 
@@ -87,42 +87,42 @@ public class TelaInscricao_Activity extends AppCompatActivity implements View.On
         return true;
     }
 
-    private void adicionarUsuario() {
-        String nomeUsuario = txtCadUsuario.getText().toString().trim();
-        String nomeLogin = txtCadLogin.getText().toString().trim();
-        String nomeEmail = txtCadEmail.getText().toString().trim();
-        String nomeSenha = txtCadSenha.getText().toString().trim();
-        String nomeConfigSenha = txtCadConfigSenha.getText().toString().trim();
+    //private void adicionarUsuario() {
+        //String nomeUsuario = txtCadUsuario.getText().toString().trim();
+        //String nomeLogin = txtCadLogin.getText().toString().trim();
+        //String nomeEmail = txtCadEmail.getText().toString().trim();
+        //String nomeSenha = txtCadSenha.getText().toString().trim();
+       // String nomeConfigSenha = txtCadConfigSenha.getText().toString().trim();
 
         //validando entrada
-        if (verificarEntrada(nomeUsuario, nomeLogin, nomeEmail, nomeSenha, nomeConfigSenha)) {
+       //if (verificarEntrada(nomeUsuario, nomeLogin, nomeEmail, nomeSenha, nomeConfigSenha)) {
 
-            String insertSQL = "INSERT INTO Usuario (" +
-                    "nomeUsuario, " +
-                    "nomeLogin, " +
-                    "nomeEmail," +
-                    "nomeSenha," +
-                    "nomeConfigSenha)" +
-                    "VALUES(?, ?, ?, ?, ?);";
+            //String insertSQL = "INSERT INTO Usuario (" +
+                 //  "nomeUsuario, " +
+                  //  "nomeLogin, " +
+                 //  "nomeEmail," +
+                 //   "nomeSenha," +
+                 //  "nomeConfigSenha)" +
+                 // "VALUES(?, ?, ?, ?, ?);";
 
-            meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLogin, nomeEmail, nomeSenha, nomeConfigSenha});
+            //meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLogin, nomeEmail, nomeSenha, nomeConfigSenha});
 
-            Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
-        }
-    }
+         // Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
+      // }
+
 
     // este método irá criar a tabela
-    private void criarTabelaUsuario() {
-        meuBancoDeDados.execSQL(
-                "CREATE TABLE IF NOT EXISTS Usuario (" +
-                        "id_usuario integer PRIMARY KEY AUTOINCREMENT," +
-                        "nomeUsuario varchar(80) NOT NULL," +
-                        "nomeLogin varchar(40) NOT NULL UNIQUE," +
-                        "nomeEmail varchar(100) NOT NULL UNIQUE," +
-                        "nomeSenha varchar(20) NOT NULL UNIQUE," +
-                        "nomeConfigSenha varchar(20) NOT NULL );"
-        );
-    }
+    //private void criarTabelaUsuario() {
+       // meuBancoDeDados.execSQL(
+            //    "CREATE TABLE IF NOT EXISTS Usuario (" +
+             //           "id_usuario integer PRIMARY KEY AUTOINCREMENT," +
+              //          "nomeUsuario varchar(80) NOT NULL," +
+              //          "nomeLogin varchar(40) NOT NULL UNIQUE," +
+              //          "nomeEmail varchar(100) NOT NULL UNIQUE," +
+              //          "nomeSenha varchar(20) NOT NULL UNIQUE," +
+               //         "nomeConfigSenha varchar(20) NOT NULL );"
+       // );
+   // }
 
     //validar campos
     private void validaCampo(){
@@ -183,18 +183,18 @@ public class TelaInscricao_Activity extends AppCompatActivity implements View.On
             case R.id.btnAvancar:
                 validaCampo();
                 break;
-            case R.id.btnCancelar:
-                finish();
+           case R.id.btnCancelar:
+               finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnAvancar) {
-            adicionarUsuario();
-        }
-    }
+   // public void onClick(View view) {
+       // if (view.getId() == R.id.btnAvancar) {
+        //    adicionarUsuario();
+       // }
+    //}
 
     public void btnAvancar(View view) {
         Intent btnAvancar = new Intent(getApplicationContext(), TelaArtistaPublico_Activity.class);

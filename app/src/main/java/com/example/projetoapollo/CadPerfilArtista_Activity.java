@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CadPerfilArtista_Activity extends AppCompatActivity implements View.OnClickListener {
+public class CadPerfilArtista_Activity extends AppCompatActivity{
 
     public static final String NOME_BANCO_DE_DADOS = "APOLLO_BD";
 
@@ -54,11 +54,11 @@ public class CadPerfilArtista_Activity extends AppCompatActivity implements View
         btnCancelar = findViewById(R.id.btnCancelar);
         btnAvancar = findViewById(R.id.btnAvancar);
 
-        btnAvancar.setOnClickListener(this);
+        //btnAvancar.setOnClickListener(this);
 
         meuBancoDeDados = openOrCreateDatabase(NOME_BANCO_DE_DADOS, MODE_PRIVATE, null);
 
-        criarTabelaPerfilArtista();
+       // criarTabelaPerfilArtista();
 
     }
 
@@ -98,31 +98,31 @@ public class CadPerfilArtista_Activity extends AppCompatActivity implements View
         return true;
     }
 
-    private void adicionarUsuario() {
-        String nomeUsuario = textCadNome.getText().toString().trim();
-        String nomeLocal = textCadLocal.getText().toString().trim();
-        String nomeSobre = textCadSobre.getText().toString().trim();
-        String nomeCidade = textCadCidade.getText().toString().trim();
-        String nomeGeneroMusical = textCadGeneroMusical.getText().toString().trim();
-        String nomeInstrumentoMusical = textCadInstrumentoMusical.getText().toString().trim();
+   // private void adicionarUsuario() {
+       // String nomeUsuario = textCadNome.getText().toString().trim();
+       // String nomeLocal = textCadLocal.getText().toString().trim();
+       // String nomeSobre = textCadSobre.getText().toString().trim();
+        //String nomeCidade = textCadCidade.getText().toString().trim();
+       // String nomeGeneroMusical = textCadGeneroMusical.getText().toString().trim();
+       // String nomeInstrumentoMusical = textCadInstrumentoMusical.getText().toString().trim();
 
         //validando entrada
-        if (verificarEntrada(nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical, nomeInstrumentoMusical)) {
+       // if (verificarEntrada(nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical, nomeInstrumentoMusical)) {
 
-            String insertSQL = "INSERT INTO PerfilArtista (" +
-                    "nomeUsuario, " +
-                    "nomeLocal, " +
-                    "nomeSobre," +
-                    "nomeCidade," +
-                    "nomeGeneroMusical," +
-                    "nomeInstrumentoMusical)" +
-                    "VALUES(?, ?, ?, ?, ?, ?);";
+    //String insertSQL = "INSERT INTO PerfilArtista (" +
+                   // "nomeUsuario, " +
+                  //  "nomeLocal, " +
+                   // "nomeSobre," +
+                   // "nomeCidade," +
+                   // "nomeGeneroMusical," +
+                   // "nomeInstrumentoMusical)" +
+                   // "VALUES(?, ?, ?, ?, ?, ?);";
 
-            meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical, nomeInstrumentoMusical});
+            //meuBancoDeDados.execSQL(insertSQL, new String[]{nomeUsuario, nomeLocal, nomeSobre, nomeCidade, nomeGeneroMusical, nomeInstrumentoMusical});
 
-            Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
-        }
-    }
+           // Toast.makeText(getApplicationContext(), "Usuario cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
+     //   }
+  //  }
 
     // este método irá criar a tabela
     private void criarTabelaPerfilArtista() {
@@ -139,45 +139,30 @@ public class CadPerfilArtista_Activity extends AppCompatActivity implements View
     }
 
     //validar campos
-    private void validaCampo() {
+   // private void validaCampo() {
 
-        boolean resp = false;
+      //  boolean resp = false;
 
-        String nomeUsuario = textCadNome.getText().toString();
+       // String nomeUsuario = textCadNome.getText().toString();
 
-        if (isCampoVazio(nomeUsuario)) {
-            textCadNome.requestFocus();
-            resp = true;
-        }
-        if (resp) {
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setTitle(R.string.title_aviso);
-            dlg.setMessage(R.string.message_campos_invalido_branco);
-            dlg.setNeutralButton("OK", null);
-            dlg.show();
-        }
-    }
+       // if (isCampoVazio(nomeUsuario)) {
+         //   textCadNome.requestFocus();
+          //  resp = true;
+       // }
+       // if (resp) {
+        //    AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+         //   dlg.setTitle(R.string.title_aviso);
+         //   dlg.setMessage(R.string.message_campos_invalido_branco);
+          //  dlg.setNeutralButton("OK", null);
+          //  dlg.show();
+       // }
+    //}
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        switch (id) {
-
-            case R.id.btnAvancar:
-                validaCampo();
-                break;
-            case R.id.btnCancelar:
-                finish();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnAvancar) {
-            adicionarUsuario();
-        }
-    }
+    //public void onClick(View view) {
+      //  if (view.getId() == R.id.btnAvancar) {
+        //    adicionarUsuario();
+        //}
+   // }
 
     private boolean isCampoVazio(String valor) {
         boolean resultado = (TextUtils.isEmpty(valor) || valor.trim().isEmpty());
